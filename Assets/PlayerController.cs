@@ -9,7 +9,7 @@ public class PlayerController : MonoBehaviour {
 	}
 	
 	// Update is called once per frame
-	void Update () {
+	void FixedUpdate () {
 		var rd = this.GetComponent<Rigidbody2D> ();
 		rd.AddForce (new Vector2 (Input.GetAxis ("Horizontal")*10, 0));
 		if(Input.GetButton("Fire1"))rd.AddForce(new Vector2(0,100));
